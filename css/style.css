@@ -1,0 +1,236 @@
+@font-face {
+    font-family: "Oswald";
+    src: local("Oswald Medium"), local("Oswald-Medium"), url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: local("Oswald Regular"), local("Oswald-Regular"), url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    font-stretch: normal;
+}
+
+.match {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    font-weight: 400;
+    font-style: normal;
+    background: #C9DFF6;
+    min-width: 355px;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.match__block {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 50px;
+}
+
+.match__title {
+    color: #00008b;
+    margin: 0 0 40px;
+    padding:0;
+    line-height: 26px;
+}
+
+.match__final-title,
+.match__wrapper {
+    margin: 0 0 30px;
+}
+
+
+
+.match__list {
+    width: 340px;
+    box-sizing: border-box;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 20px;
+    border: 2px solid #00008b;
+}
+
+.match__item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #00008b;
+    align-items: center;
+    padding: 20px 0 20px;
+    box-sizing: border-box;
+}
+
+.match__item:last-child {
+    border-bottom: none;
+}
+
+.match__item--win {
+    padding-top: 25px;
+}
+
+.match__heading {
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+}
+
+.match__item-country {
+    margin: 0;
+    width: 40%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 10px;
+}
+.match__item-country--title {
+    justify-content: center;
+}
+
+.match__list {
+    position: relative;
+}
+
+.match__item-country--title::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 20px;
+    border-right: 2px solid #00008b;
+    right: 30%;
+    top: 0;
+}
+
+.match__item-country--title::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 20px;
+    border-right: 2px solid #00008b;
+    right: 60%;
+    top: 0;
+}
+
+.match__item-goal {
+    margin: 0;
+    width: 30%;
+}
+
+.match__item-score {
+    margin: 0;
+    width: 30%;
+}
+
+.match__item-image {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.match__item-lost {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.match__item-team {
+    position: relative;
+    margin: 0 0 0 10px;
+    width: 65px;
+}
+
+.match__item-team--cup::before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 20px;
+    background: url('../images/cup.png') no-repeat;
+    background-size: 20px 20px;
+    left: 50%;
+    top: -25px;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+    .match__wrapper {
+        width: 720px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto 30px;
+    }
+
+    .match__list {
+        margin: 0;
+    }
+
+    .match__list--winner {
+        margin: 0 auto;
+    }
+
+    .match__final-winner {
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1300px) {
+    .match {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .match__wrapper {
+        width: 1400px;
+    }
+
+    .match__list {
+        width: 45%;
+    }
+
+    .match__list--winner {
+        margin: 0 auto;
+    }
+
+    .match__item-team {
+        width: auto;
+    }
+
+    .match__item--win {
+        padding: 45px 0 20px;
+    }
+
+    .match__item-lost {
+        margin: 0;
+    }
+
+    .match__item-team--cup::before {
+        height: 40px;
+        width: 40px;
+        background: url('../images/cup.png') no-repeat;
+        background-size: 40px 40px;
+        top: -45px;
+    }
+
+    .match__item-country {
+        padding-left: 40px;
+    }
+
+    .match__item-country--title {
+        padding-right: 50px;
+    }
+
+    .match__final-winner {
+        width: 1400px;
+    }
+}
